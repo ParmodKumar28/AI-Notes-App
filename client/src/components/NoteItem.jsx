@@ -65,7 +65,9 @@ export default function NoteItem({ note }) {
                 <>
                     <p style={{ whiteSpace: 'pre-wrap' }}>{note.transcript}</p>
                     <NoteSummary note={note} />
-                    <NoteToolbar note={note} busy={busy} onEdit={() => setEditing(true)} onDelete={remove} onSummarize={handleSummarize} />
+                    <div style={{ marginTop: '16px' }}>
+                        <NoteToolbar note={note} busy={busy} onEdit={() => setEditing(true)} onDelete={remove} onSummarize={handleSummarize} />
+                    </div>
                 </>
             )}
         </div>
